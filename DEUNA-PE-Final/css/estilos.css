@@ -249,3 +249,20 @@ button:focus-visible {
 .fondo-oscuro h3{
    color: #FFC93C !important;
                  opacity: 1 !important; }
+
+/* Forzar la tarjeta de Nosotros */
+.card-deuna,
+article.card-deuna{
+  background: #241C17 !important;
+  background-color: #241C17 !important;
+  opacity: 1 !important;
+  border: 1px solid #FFC93C !important;
+}
+
+.card-deuna p,
+.card-deuna li,
+.card-deuna span,
+article.card-deuna p{
+  color: #FFFFFF !important;
+  opacity: 1 !important;
+}
