@@ -228,3 +228,24 @@ button:focus-visible {
     min-height: 55vh;
   }
 }
+
+/* Que la tarjeta no sea transparente */
+.fondo-oscuro .card, 
+.fondo-oscuro .card-deuna,
+.fondo-oscuro .contenedor{
+   background: #241C17 !important;
+   opacity: 1 !important;
+}
+/* Que el texto sea blanco puro, sin opacidad */ 
+.fondo-oscuro p,
+.fondo-oscuro li,
+.fondo-oscuro span{
+   color: #FFFFFF !important;
+   opacity: 1 !important;
+   font-weight: 500 !important; 
+  }
+.fondo-oscuro h1,
+.fondo-oscuro h2,
+.fondo-oscuro h3{
+   color: #FFC93C !important;
+                 opacity: 1 !important; }
