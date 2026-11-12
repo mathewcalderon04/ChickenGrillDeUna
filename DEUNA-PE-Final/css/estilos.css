@@ -1,0 +1,225 @@
+/* ============================================
+   DEUNA.PE - Estilos personalizados
+   Bootstrap 5 + Animaciones CSS
+   ============================================ */
+
+:root {
+  --color-primario: #ffcc00;
+  --color-oscuro: #0d0d0d;
+  --color-card: rgba(20, 20, 20, 0.92);
+  --color-texto: #f5f5f5;
+  --sombra: 0 8px 25px rgba(0, 0, 0, 0.45);
+}
+
+/* ---------- Base ---------- */
+body {
+  background-color: var(--color-oscuro);
+  color: var(--color-texto);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+}
+
+/* Fondo con imagen sutil */
+.fondo-oscuro {
+  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+              url('../img/fondo_deuna.png') center/cover no-repeat fixed;
+}
+
+/* ---------- Tipografía ---------- */
+.titulo-marca {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #fff;
+}
+
+.texto-dorado {
+  color: var(--color-primario) !important;
+}
+
+/* ---------- Navbar ---------- */
+.navbar-deuna {
+  background-color: rgba(0, 0, 0, 0.95) !important;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 15px rgba(0,0,0,0.5);
+}
+
+.navbar-deuna .nav-link {
+  color: #eee !important;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-deuna .nav-link:hover,
+.navbar-deuna .nav-link.active {
+  color: var(--color-primario) !important;
+}
+
+/* Animación 1: subrayado deslizante en menú */
+.navbar-deuna .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--color-primario);
+  transition: all 0.35s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-deuna .nav-link:hover::after,
+.navbar-deuna .nav-link.active::after {
+  width: 70%;
+}
+
+/* ---------- Hero / Inicio ---------- */
+.hero-deuna {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+/* Animación 2: entrada suave del título */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.anim-entrada {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.anim-entrada-delay {
+  animation: fadeInUp 1s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+/* ---------- Cards ---------- */
+.card-deuna {
+  background: var(--color-card);
+  border: 1px solid rgba(255, 204, 0, 0.25);
+  border-radius: 12px;
+  box-shadow: var(--sombra);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+/* Animación 3: elevación al pasar el mouse */
+.card-deuna:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(255, 204, 0, 0.2);
+  border-color: var(--color-primario);
+}
+
+/* ---------- Botones ---------- */
+.btn-dorado {
+  background-color: var(--color-primario);
+  color: #111;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.6rem;
+  transition: all 0.3s ease;
+}
+
+/* Animación 4: pulso / escala en botón */
+.btn-dorado:hover {
+  background-color: #ffe066;
+  color: #000;
+  transform: scale(1.06);
+  box-shadow: 0 0 20px rgba(255, 204, 0, 0.5);
+}
+
+.btn-whatsapp {
+  background-color: #25d366;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebe57;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* ---------- Lista de platos ---------- */
+.lista-platos li {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  transition: padding-left 0.3s ease, color 0.3s ease;
+}
+
+/* Animación 5: desplazamiento al hover de items */
+.lista-platos li:hover {
+  padding-left: 12px;
+  color: var(--color-primario);
+}
+
+/* ---------- Promos ---------- */
+.promo-box {
+  border-left: 5px solid var(--color-primario);
+  background: rgba(255, 204, 0, 0.08);
+  border-radius: 0 10px 10px 0;
+  transition: background 0.3s ease;
+}
+
+.promo-box:hover {
+  background: rgba(255, 204, 0, 0.15);
+}
+
+/* ---------- Reseñas ---------- */
+.estrella {
+  color: var(--color-primario);
+}
+
+/* Animación extra (bonus): brillo suave en logo/título */
+@keyframes brilloSuave {
+  0%, 100% { text-shadow: 0 0 8px rgba(255, 204, 0, 0.3); }
+  50% { text-shadow: 0 0 22px rgba(255, 204, 0, 0.7); }
+}
+
+.brillo {
+  animation: brilloSuave 3s ease-in-out infinite;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background: rgba(0, 0, 0, 0.9);
+  border-top: 1px solid rgba(255, 204, 0, 0.2);
+}
+
+/* ---------- Accesibilidad ---------- */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-primario);
+  outline-offset: 3px;
+}
+
+/* Mejor contraste en textos secundarios */
+.text-muted-deuna {
+  color: #c8c8c8 !important;
+}
+
+/* Responsive ajustes */
+@media (max-width: 576px) {
+  .titulo-marca {
+    font-size: 2.8rem !important;
+    letter-spacing: 1px;
+  }
+  .hero-deuna {
+    min-height: 55vh;
+  }
+}
