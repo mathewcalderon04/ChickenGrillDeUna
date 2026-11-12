@@ -22,9 +22,12 @@ body {
 /* Fondo con imagen sutil */
 .fondo-oscuro {
   background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
-              url('../img/fondo_deuna.png') center/cover no-repeat fixed;
+              url('../img/fondo_deuna.jpeg') center/cover no-repeat fixed;
 }
-
+/* ============================================
+/* ============================================
+/* ============================================
+/* ============================================
 /* ---------- Tipografía ---------- */
 .titulo-marca {
   font-family: Georgia, 'Times New Roman', serif;
